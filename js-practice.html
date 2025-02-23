@@ -11,78 +11,103 @@
   <p>Use your inspector to view your console.</p>
   <script>
     console.log("Let's do math");
+      let x=5;
+      console.log(x);
+    
+      let y=3;
+      console.log(y);
 
-    let x=5;
-    console.log(x);
-  
-    let y=3;
-    console.log(y);
+      let z=x*y;
+      console.log(z);
 
-    let z=x*y;
-    console.log(z);
+      //Math on my own
+        let a=5;
+        console.log(a);
+        
+        let b=12;
+        console.log(b);
 
-    //Math on my own
-      let a=5;
-      console.log(a);
-      
-      let b=12;
-      console.log(b);
+        let m=a+b;
+        console.log(m);
 
-      let m=a+b;
-      console.log(m);
+        let n=a-b;
+        console.log(n);
 
-      let n=a-b;
-      console.log(n);
-
-      let o=a/b;
-      console.log(o);
+        let o=a/b;
+        console.log(o);
 
 
     console.log("Working with strings");
-    let firstName = 'Samantha';
-    let middleName = 'De Ramos';
-    let lastName = 'Natividad';
-    let name = firstName+" "+middleName+" "+lastName;
-    console.log(name);
+      let firstName = 'Samantha';
+      let middleName = 'De Ramos';
+      let lastName = 'Natividad';
+      let name = firstName + " "+ middleName + " " + lastName;
+      console.log(name);
 
-    //Strings on my own
-      let greeting = "My name is "+name+".";
-      console.log(greeting);
+      //Strings on my own
+        let greeting = "My name is "+name+".";
+        console.log(greeting);
 
   
     console.log('Using functions.')
-    // function to make square numbers
-    function makeSquare(theNumb) {
-      let squared = theNumb * theNumb;
-      return squared;
-    }
-    let try01 = makeSquare(3);
-    console.log(try01);
+      // function to make square numbers
+        function makeSquare(theNumb) {
+          let squared = theNumb * theNumb;
+          return squared;
+        }
+        let try01 = makeSquare(3);
+        console.log(try01);
 
-    let try02 = makeSquare(12);
-    console.log(try02);
-    
+        let try02 = makeSquare(12);
+        console.log(try02);
 
-    let try03 = makeSquare(-6);
-    console.log(try03);
-    
-    // Functions on my own
-      function makeName (firstName, middleName, lastName) {
-        let theName = firstName+" "+middleName+" "+lastName;
-        return theName
+        let try03 = makeSquare(-6);
+        console.log(try03);
+      
+      // Functions on my own
+        function makeName (firstName, middleName, lastName) {
+          let theName = firstName + " "+ middleName + " " + lastName;
+          return theName
+        }
+
+        let name01 = makeName("Marinette", "Dupain", "Cheng")
+        console.log(name01);
+
+        let name02 = makeName("Aelin", "Whitethorn", "Galithinius")
+        console.log(name02);
+
+        let name03 = makeName("Robert", '"Beto"', "O'Rourke")
+        console.log(name03);
+
+
+    console.log("Making a better name function.")
+      function makeBetterName (firstName, middleName, lastName) {
+        if (middleName.length === 1) {
+          middleName = middleName + ".";
+          return middleName;
+        }
+        let fullName = firstName + " "+ middleName + " " + lastName;
+        return fullName;
       }
 
-      let name01 = makeName("Marinette", "Dupain", "Cheng")
-      console.log(name01);
+      console.log(makeBetterName("Joan", "Marie", "Larkin"));
+      console.log(makeBetterName("John", "F", "Kennedy"))
+      console.log(makeBetterName("Kyan", "A", "Ocampo"))
 
-      let name02 = makeName("Aelin", "Whitethorn", "Galithinius")
-      console.log(name02);
+    console.log("scoreCompare function");
+      function scoreCompare(home, away) {
+        if (home > away) {
+          return "Home team wins!";
+        } else if (home === away) {
+          return "It was a tie.";
+        } else {
+          return "Away team wins :(";
+        }
+      }
 
-      let name03 = makeName("Robert", '"Beto"', "O'Rourke")
-      console.log(name03);
-
-
-
+      console.log(scoreCompare(5,3));
+      console.log(scoreCompare(3,5));
+      console.log(scoreCompare(3,3));
 
   </script>
 </body>
